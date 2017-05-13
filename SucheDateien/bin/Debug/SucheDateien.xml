@@ -1,0 +1,324 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SucheDateien
+</name>
+</assembly>
+<members>
+<member name="T:SucheDateien.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:SucheDateien.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:SucheDateien.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="P:SucheDateien.My.Resources.Resources.P1010126">
+<summary>
+  Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSet.DateiDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSet.DateiRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSet.DateiRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSetTableAdapters.DateiTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SucheDateien.DateienDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SucheDateien.DateienDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SucheDateien.DateienDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager.UpdateAll(SucheDateien.DateienDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:SucheDateien.DateienDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:SucheDateien.FileSearch">
+ <summary>
+ Mit dieser Klasse können Sie auf einem lokalen Computer nach Dateien suchen.
+ Dazu stehen Ihnen eine Vielzahl an Filtern mit der man die Suche präzise an seine Bedürfnisse anpassen kann.
+ </summary>
+ <remarks>
+ Sie können diese Klasse frei verwenden auch in kommerziellen Programmen.
+ Ich bitte Sie lediglich um einen Hinweis über diese Klasse und dem Autor in Ihrem Programm (z.B. Info-Dialog)
+ Kontakt: khartak@freenet.de
+ Copyright © 2006 Tim Hartwig
+ </remarks>
+</member>
+<member name="P:SucheDateien.FileSearch.RaiseErrors">
+ <summary>
+ Gibt an ob das Event für Fehlermeldungen bei einem Fehler aufgerufen werden soll.
+ In den meisten fällen tritt ein Fehler auf wenn versucht wird z.B.
+ den Ordner "System Volume Information" zu öffnen etc.
+ </summary>
+</member>
+<member name="E:SucheDateien.FileSearch.MatchFound">
+ <summary>
+ Wird aufgerufen wenn eine Datei gültige gefunden wurde.
+ </summary>
+ <param name="FileName">Der Dateiname mit kompletten Pfad</param>
+</member>
+<member name="E:SucheDateien.FileSearch.RaiseError">
+ <summary>
+ Wird aufgerufen wenn ein Fehler auftritt z.B. ein verweigerter Zugriff auf einen Ordner etc.
+ </summary>
+ <param name="ErrorMessage">Die Fehlernachricht</param>
+</member>
+<member name="E:SucheDateien.FileSearch.SearchComplete">
+ <summary>
+ Wird aufgerufen wenn der Suchvorgang vollständig ist
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SucheDateien.FileSearch.Search(System.String,System.String,SucheDateien.FileSearch.SearchFilter,System.Collections.Generic.List{System.String}@)">
+ <summary>
+ Diese Funktion sucht nach bestimmten Dateien
+ </summary>
+ <param name="Root">Der Ordner in dem gesucht werden soll</param>
+ <param name="SearchWord">Ein Optionales Suchwort</param>
+ <param name="Filter">Der Filter für die Suche</param>
+ <param name="FileArray">Das Array in der die gefundenen Dateien und/oder Ordner kommen</param>
+</member>
+<member name="M:SucheDateien.FileSearch.ListAll(System.String,System.Collections.Generic.List{System.String}@,SucheDateien.FileSearch.SearchFilter.LO)">
+ <summary>
+ Diese Funktion listet alle Dateien und/oder Ordner inklusive Unterordner auf und speichert diese in einem Array
+ </summary>
+ <param name="Root">Der Ordner in dem gesucht werden soll</param>
+ <param name="FileArray">Ein 0-basiertes Array in welchem die Suchergebnisse gespeichert werden sollen</param>
+ <param name="FFBFilter">Angabe ob nur alle Dateien oder nur alle Ordner oder beides aufgelistet werden soll</param>
+</member>
+<member name="M:SucheDateien.FileSearch.GetFolderSize(System.String,SucheDateien.FileSearch.SearchFilter.ST)">
+ <summary>
+ Diese Funktion berechnet die Größe eines Ordners
+ </summary>
+ <param name="Root">Der Ordner wessen größe berechnet werden soll</param>
+ <param name="SizeFormat">Angabe in welchem Format die Gesamtgröße zurückgegeben werden soll: GB,MB,KB,B</param>
+</member>
+<member name="M:SucheDateien.FileSearch.Abort">
+ <summary>
+ Bricht den Suchvorgang ab
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SucheDateien.FileSearch.GetErrorLog">
+ <summary>
+ Diese Funktion gibt alle bei der Suche aufgetretenen Fehlermeldungen zurück
+ </summary>
+</member>
+<member name="M:SucheDateien.FileSearch.GetCRC32(System.String)">
+ <summary>
+ Diese Funktion berechnet den CRC32 Hash einer Datei
+ </summary>
+</member>
+<member name="M:SucheDateien.FileSearch.GetMD5(System.String)">
+ <summary>
+ Diese Funktion berechnet den MD5 Hash einer Datei
+ </summary>
+</member>
+<member name="M:SucheDateien.FileSearch.GetSHA(System.String)">
+ <summary>
+ Diese Funktion berechnet den SHA1 Hash einer Datei
+ </summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.LO.BOTH">
+ <summary>Ordner und Dateien auflisten</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.LO.FILES_ONLY">
+ <summary>Nur Dateien auflisten</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.LO.FOLDERS_ONLY">
+ <summary>Nur Ordner auflisten</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.DT.CREATE_TIME">
+ <summary>Das Erstellungsdatum der Datei zum vergleichen benutzen</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.DT.LAST_ACCESS_TIME">
+ <summary>Das Zugriffsdatum der Datei zum vergleichen benutzen</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.DT.LAST_WRITE_TIME">
+ <summary>Das Änderungsdatum der Datei zum vergleichen benutzen</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.ST.BYTES">
+ <summary>Auf Byte-Ebene vergleichen (FileSize/1)</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.ST.KILO_BYTES">
+ <summary>Auf KiloByte-Ebene vergleichen (FileSize/1024)</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.ST.MEGA_BYTES">
+ <summary>Auf MegaByte-Ebene vergleichen (FileSize/1048576)</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.ST.GIGA_BYTES">
+ <summary>Auf GigaByte-Ebene vergleichen (FileSize/1073741824)</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.CO.NONE">
+ <summary>Das Suchwort wird nicht mit dem Dateinamen verglichen</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.CO.NORMAL">
+ <summary>Das Suchwort wird normal mit dem Dateinamen verglichen</summary>
+</member>
+<member name="F:SucheDateien.FileSearch.SearchFilter.CO.CASESENSITIVE">
+ <summary>Das Suchwort wird exakt mit dem Dateinamen verglichen</summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.Listing">
+ <summary>
+ Legt fest ob nur Dateien, nur Ordner oder beides aufgelistet werden soll.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.FileTypes">
+ <summary>
+ Legt die Dateitypen fest die gesucht werden sollen z.B. exe,txt,bmp etc.
+ Mehrere Extensionen müssen mit einem Komma getrennt und ohne Punkt und Sternchen angegeben werden.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.WordComparing">
+ <summary>
+ Legt fest wie die Dateien mit dem Suchwort verglichen werden sollen.
+ Entweder garnicht, einfacher Textvergleich oder exakter Textvergleich (Case Sensitive).
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.ExcludeFolders">
+ <summary>
+ Gibt an welche Ordner von der Suche ausgeschlossen werden sollen.
+ Man kann entweder einen bestimmten Ordner mit Pfad angeben oder einen Ordnernamen.
+ Mehrere Ordner müssen mit einem Komma getrennt werden.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.ExcludeFiles">
+ <summary>
+ Gibt an welche Dateien von der Suche ausgeschlossen werden sollen.
+ Man kann entweder eine bestimmte Datei mit Pfad angeben oder einen Dateinamen.
+ Mehrere Dateien müssen mit einem Komma getrennt werden
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.ExcludeFileTypes">
+ <summary>
+ Legt fest nach welchen Dateitypen nicht gesucht werden soll z.B. exe,txt,bmp...
+ Mehrere Extensionen müssen mit einem Komma getrennt und ohne Punkt und Sternchen angegeben werden.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.MaxSize">
+ <summary>
+ Legt die Maximale größe der zu suchenden Dateien fest.
+ Es werden keine Dateien aufgelistet die größer sind als hier angegeben.
+ Man kann die größe in B,KB,MB und GB angeben.
+ Das kann man in der Eigenschaft SizeType festlegen.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.MinSize">
+ <summary>
+ Legt die Minimale größe der zu suchenden Dateien fest.
+ Es werden keine Dateien aufgelistet die kleiner sind als hier angegeben.
+ Man kann die größe in B,KB,MB und GB angeben.
+ Das kann man in der Eigenschaft SizeType festlegen.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.SizeType">
+ <summary>
+ Legt den Größentyp für die Eigenschaften MaxSize und MinSize fest.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.MaxDate">
+ <summary>
+ Legt das maximale Datum der zu suchenden Dateien fest.
+ Es werden keine Dateien aufgelistet die neuer sind als hier angegeben.
+ Welches Datum man vergleichen will (Zugriffdatum, Erstellungsdatum oder Änderungsdatum)
+ kann man in der Eigenschaft DateType festlegen.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.MinDate">
+ <summary>
+ Legt das minimale Datum der zu suchenden Dateien fest.
+ Es werden keine Dateien aufgelistet die älter sind als hier angegeben.
+ Welches Datum man vergleichen will (Zugriffdatum, Erstellungsdatum oder Änderungsdatum)
+ kann man in der Eigenschaft DateType festlegen.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.DateType">
+ <summary>
+ Legt für die Eigenschaften MinDate und MaxDate fest welches Datum der Dateien verglichen werden soll.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.CRCHash">
+ <summary>
+ Legt einen CRC32 Hash fest.
+ Wenn man einen CRC32 Hash festlegt werden nur die Dateien aufgelistet die diesen Hash haben.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.MD5Hash">
+ <summary>
+ Legt einen MD5 Hash fest.
+ Wenn man einen MD5 Hash festlegt werden nur die Dateien aufgelistet die diesen Hash haben.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.SHAHash">
+ <summary>
+ Legt einen SHA1 Hash fest.
+ Wenn man einen SHA1 Hash festlegt werden nur die Dateien aufgelistet die diesen Hash haben.
+ </summary>
+</member>
+<member name="P:SucheDateien.FileSearch.SearchFilter.NoSubFolders">
+ <summary>
+ Legt fest ob Unterordner von der Suche ausgeschlossen werden sollen.
+ </summary>
+</member>
+</members>
+</doc>

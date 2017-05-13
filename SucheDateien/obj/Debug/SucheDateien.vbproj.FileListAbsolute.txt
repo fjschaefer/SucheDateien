@@ -1,0 +1,17 @@
+D:\Programmierung\SucheDateien\SucheDateien\bin\Debug\Dateien.mdf
+D:\Programmierung\SucheDateien\SucheDateien\bin\Debug\Dateien_log.ldf
+D:\Programmierung\SucheDateien\SucheDateien\bin\Debug\SucheDateien.exe.config
+D:\Programmierung\SucheDateien\SucheDateien\bin\Debug\SucheDateien.exe
+D:\Programmierung\SucheDateien\SucheDateien\bin\Debug\SucheDateien.pdb
+D:\Programmierung\SucheDateien\SucheDateien\bin\Debug\SucheDateien.xml
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.Form1.resources
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.Resources.resources
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.vbproj.GenerateResource.Cache
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.exe
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.xml
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.pdb
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.EingebauteVerbindung.resources
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.TestRekursivesSuchen.resources
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.Hauptmaske.resources
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.SuchTabelle.resources
+D:\Programmierung\SucheDateien\SucheDateien\obj\Debug\SucheDateien.vbprojResolveAssemblyReference.cache
